@@ -6,6 +6,7 @@ const authRoutes = require('./routes/authRoutes');
 const appointmentsRoutes = require('./routes/appointmentRoutes');
 const ambulanceRoutes = require('./routes/ambulanceRoutes'); 
 const driverRoutes = require('./routes/driverRoutes'); 
+const hospitalRoutes = require("./routes/hospitalRoutes")
 const dotenv= require("dotenv");
 dotenv.config();
 
@@ -19,6 +20,7 @@ app.use('/auth', authRoutes);
 app.use('/api', appointmentsRoutes);
 app.use('/api', ambulanceRoutes);
 app.use('/api', driverRoutes);
+app.use("/api",hospitalRoutes)
 
 
 app.use((err, req, res, next) => {
