@@ -1,16 +1,32 @@
-# mediconnect
+// main.dart
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'screens/screens.dart';
 
-A new Flutter project.
+final GoRouter _router = GoRouter(
+  routes: <GoRoute>[
+    GoRoute(path: '/', builder: (BuildContext context) => const HomeScreen()),
+    GoRoute(path: '/sign-in', builder: (BuildContext context) => const SignInScreen()),
+    GoRoute(path: '/register', builder: (BuildContext context) => const RegisterScreen()),
+    GoRoute(path: '/profile', builder: (BuildContext context) => const ProfileScreen()),
+    GoRoute(path: '/medical', builder: (BuildContext context) => const MedicalScreen()),
+  ],
+);
 
-## Getting Started
+void main() {
+  runApp(MyApp());
+}
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => AppProvider()),
+      ],
+      child: MaterialApp.router(
+        routerConfig: _router,
+      ),
+    );
+  }
+}
