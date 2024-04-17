@@ -99,3 +99,17 @@
   function generateJWT(user) {
     return jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
   }
+  
+
+exports.googleLoginCallback = async (req, res) => {
+  try {
+    const { googleToken } = req.body;
+
+    const googleUser = await handleGoogleLogin(googleToken);
+    const token = generateJWT(googleUser);
+    res.json({ token });
+  } catch (error) {
+    logger.error('Error in Google login:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+};
