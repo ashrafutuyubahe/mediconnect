@@ -18,6 +18,7 @@ class RegisterScreen extends StatelessWidget {
           try {
             final user = await authService.register(email, password);
             Provider.of<AppProvider>(context, listen: false).setUser(user);
+            // ignore: use_build_context_synchronously
             context.go('/');
           } catch (e) {
             // Handle error

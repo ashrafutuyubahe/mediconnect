@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import '../models/user.dart';
+import '../providers/user.dart';
 
 class UserService {
   final _baseUrl = 'http://your-backend-url.com/api/users';
