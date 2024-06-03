@@ -1,15 +1,14 @@
-const bodyParser = require("body-parser");
+const express = require("express");
+const app = express();
 const http = require("http");
 const socketIo = require("socket.io");
 
-const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
     origin: "*",
   },
 });
-const express = require("express");
 const router = express.Router();
 const ambulanceController = require("../controllers/ambulanceController");
 const authMiddleware = require("../middleware/authMiddleware");
