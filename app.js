@@ -42,7 +42,7 @@ io.on("connection", (socket) => {
 
   socket.on("updateLocation", async (data) => {
     try {
-      const ambulance = await Ambulance.findByIdAndUpdate(
+      const ambulance = await ambulance.findByIdAndUpdate(
         data.id,
         {
           location: {

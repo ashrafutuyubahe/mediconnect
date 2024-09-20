@@ -13,7 +13,7 @@ const router = express.Router();
 const ambulanceController = require("../controllers/ambulanceController");
 const authMiddleware = require("../middleware/authMiddleware");
 
-router.use(authMiddleware);
+// router.use(authMiddleware);
 
 router.get("/ambulances", ambulanceController.getAmbulances);
 router.post("/ambulances", ambulanceController.createAmbulance);
