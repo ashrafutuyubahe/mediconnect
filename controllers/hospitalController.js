@@ -20,8 +20,8 @@ exports.createHospital = async (req, res) => {
         res.status(400).send("please provide all fields");
       }
  
-      const isHospitalExist = await Hospital.findOne({name});
-      if(isHospitalExist){
+      const doesHospitalExist = await Hospital.findOne({name});
+      if(doesHospitalExist){
         res.status(400).send("Hospital already exists");
       }   
 
@@ -39,9 +39,9 @@ exports.updateHospital = async (req, res) => {
     const { id } = req.params;
     const { name, location } = req.body;
 
-    const isHospitalExist = await Hospital.findById(id);
+    const doesHospitalExist = await Hospital.findById(id);
 
-    if (!isHospitalExist) {
+    if (!doesHospitalExist) {
       return res.status(404).json({ error: "The hospital doesn't exist" });
     }
     
@@ -66,9 +66,9 @@ exports.deleteHospital = async (req, res) => {
     const { id } = req.params;
  
    
-    const isHospitalExist = await Hospital.findById(id);
+    const doesHospitalExist = await Hospital.findById(id);
 
-    if (!isHospitalExist) {
+    if (!doesHospitalExist) {
       return res.status(404).json({ error: "The hospital doesn't exist" });
     }
 

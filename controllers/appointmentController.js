@@ -42,6 +42,19 @@ exports.updateAppointment = async (req, res) => {
   try {
     const { id } = req.params;
     const { date, time, provider } = req.body;
+
+
+    if(!date||!time ||!provider){
+      res.status(400).send("please provide all fields");
+    }
+
+    const doesAppointmentExist = await Hospital.findOne({id});
+
+    if(!doesAppointmentExist){
+      res.status(400).send("Hospital doesn't exists");
+    }   
+
+
     const updatedAppointment = await Appointment.findOneAndUpdate(
       { _id: id, user: req.user.id },
       { date, time, provider },
@@ -60,6 +73,13 @@ exports.updateAppointment = async (req, res) => {
 exports.deleteAppointment = async (req, res) => {
   try {
     const { id } = req.params;
+    
+    const doesAppointmentExist = await Hospital.findOne({id});
+
+    if(!doesAppointmentExist){
+      res.status(400).send("Hospital doesn't exists");
+    }
+
     const deletedAppointment = await Appointment.findOneAndDelete({ _id: id, user: req.user.id });
     if (!deletedAppointment) {
       return res.status(404).json({ error: 'Appointment not found' });
