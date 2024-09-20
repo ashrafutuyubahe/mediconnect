@@ -195,3 +195,4 @@
 [2024-09-20T15:47:51.066Z] info: Server is running on port 3000
 [2024-09-20T15:48:07.782Z] info: Server is running on port 3000
 [2024-09-20T15:48:17.838Z] error: Error creating appointment: Cannot set headers after they are sent to the client
+[2024-09-20T15:48:48.779Z] info: Server is running on port 3000
