@@ -13,7 +13,7 @@ const router = express.Router();
 const ambulanceController = require("../controllers/ambulanceController");
 const authMiddleware = require("../middleware/authMiddleware");
 
-// router.use(authMiddleware);
+router.use(authMiddleware);
 
 router.get("/ambulances", ambulanceController.getAmbulances);
 router.post("/ambulances", ambulanceController.createAmbulance);
@@ -24,7 +24,7 @@ io.on("connection", (socket) => {
 
   socket.on("updateLocation", async (data) => {
     try {
-      const ambulance = await Ambulance.findByIdAndUpdate(
+      const ambulance = await ambulance.findByIdAndUpdate(
         data.id,
         {
           location: {
