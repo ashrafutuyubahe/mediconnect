@@ -3,7 +3,7 @@ const router = express.Router();
 const driverController = require('../controllers/driverController');
 const authMiddleware = require('../middleware/authMiddleware');
 
-// router.use(authMiddleware);
+router.use(authMiddleware);
 
 router.get('/drivers', driverController.getDrivers);
 router.post('/drivers', driverController.createDriver);

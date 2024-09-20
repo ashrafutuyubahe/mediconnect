@@ -3,7 +3,7 @@ const router = express.Router();
 const appointmentsController = require('../controllers/appointmentController');
 const authMiddleware = require('../middleware/authMiddleware');
 
-// router.use(authMiddleware);
+router.use(authMiddleware);
 
 router.get('/appointments', appointmentsController.getAppointments);
 router.post('/appointments', appointmentsController.createAppointment);

@@ -25,11 +25,11 @@ app.use(express.json());
 
 connectDB();
 
-app.use("/auth", authRoutes);
-app.use("/api", appointmentsRoutes);
-app.use("/api", ambulanceRoutes);
-app.use("/api", driverRoutes);
-app.use("/api", hospitalRoutes);
+app.use("/auth/authRoute", authRoutes);
+app.use("/api/appointmentsRoutes", appointmentsRoutes);
+app.use("/api/ambulanceRoutes", ambulanceRoutes);
+app.use("/api/driverRoutes", driverRoutes);
+app.use("/api/hospitalRoutes", hospitalRoutes);
 
 app.use((err, req, res, next) => {
   logger.error("An error occurred:", err);
