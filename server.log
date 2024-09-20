@@ -122,3 +122,4 @@
 [2024-09-20T14:45:12.114Z] error: Error deleting hospital: Cannot set headers after they are sent to the client
 [2024-09-20T14:45:58.025Z] info: Server is running on port 3000
 [2024-09-20T14:46:08.718Z] error: Error deleting hospital: Cannot set headers after they are sent to the client
+[2024-09-20T14:46:28.207Z] info: Server is running on port 3000
