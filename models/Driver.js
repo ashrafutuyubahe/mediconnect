@@ -5,4 +5,4 @@ const Driver = mongoose.model('Driver', {
   ambulance: { type: mongoose.Schema.Types.ObjectId, ref: 'Ambulance' }
 });
 
-module.exports=Driver
+module.exports=Driver 

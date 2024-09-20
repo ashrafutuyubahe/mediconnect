@@ -6,7 +6,7 @@ const ambulanceSchema = new mongoose.Schema({
     required: true,
   },
   make: {
-    type: String,
+    type: String, 
     required: true,
   },
   model: {

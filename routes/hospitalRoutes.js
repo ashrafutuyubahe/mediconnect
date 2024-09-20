@@ -7,7 +7,7 @@ router.use(authMiddleware);
 
 router.get('/hospitals', hospitalController.getHospitals);
 router.post('/hospitals', hospitalController.createHospital);
-router.put('/hospitals/:id', hospitalController.updateHospital);
+router.put('/hospitals/', hospitalController.updateHospital);
 router.delete('/hospitals/:id', hospitalController.deleteHospital);
 
 module.exports = router;

@@ -36,3 +36,89 @@
 [2024-09-20T13:03:47.303Z] info: Server is running on port 3000
 [2024-09-20T13:04:10.519Z] info: Server is running on port 3000
 [2024-09-20T13:11:16.308Z] info: Server is running on port 3000
+[2024-09-20T13:13:56.371Z] error: Authentication failed: Cannot read properties of undefined (reading 'replace')
+[2024-09-20T13:15:09.511Z] error: Authentication failed: jwt malformed
+[2024-09-20T13:19:59.913Z] info: Server is running on port 3000
+[2024-09-20T13:26:59.307Z] info: Server is running on port 3000
+[2024-09-20T13:30:52.093Z] error: Authentication failed: Cannot read properties of undefined (reading 'replace')
+[2024-09-20T13:33:00.649Z] error: Authentication failed: Cannot read properties of undefined (reading 'replace')
+[2024-09-20T13:35:02.846Z] info: Server is running on port 3000
+[2024-09-20T13:35:37.954Z] info: Server is running on port 3000
+[2024-09-20T13:35:51.672Z] info: Server is running on port 3000
+[2024-09-20T13:36:40.803Z] info: Server is running on port 3000
+[2024-09-20T13:36:42.493Z] info: Server is running on port 3000
+[2024-09-20T13:37:00.450Z] info: Server is running on port 3000
+[2024-09-20T13:37:03.667Z] info: Server is running on port 3000
+[2024-09-20T13:37:08.865Z] info: Server is running on port 3000
+[2024-09-20T13:37:25.533Z] info: Server is running on port 3000
+[2024-09-20T13:37:34.254Z] info: Server is running on port 3000
+[2024-09-20T13:37:39.229Z] info: Server is running on port 3000
+[2024-09-20T13:37:43.169Z] info: Server is running on port 3000
+[2024-09-20T13:40:26.990Z] error: Error creating driver: Cast to ObjectId failed for value "ambulance1" (type string) at path "_id" for model "Ambulance"
+[2024-09-20T13:42:03.625Z] error: Error creating driver: Cast to ObjectId failed for value "2234" (type string) at path "_id" for model "Ambulance"
+[2024-09-20T13:42:37.726Z] info: Server is running on port 3000
+[2024-09-20T13:44:17.066Z] info: Server is running on port 3000
+[2024-09-20T13:44:28.646Z] info: Server is running on port 3000
+[2024-09-20T13:44:42.871Z] info: Server is running on port 3000
+[2024-09-20T13:44:48.917Z] info: Server is running on port 3000
+[2024-09-20T13:44:51.098Z] info: Server is running on port 3000
+[2024-09-20T13:45:14.202Z] info: Server is running on port 3000
+[2024-09-20T13:45:30.869Z] info: Server is running on port 3000
+[2024-09-20T13:47:16.883Z] info: Server is running on port 3000
+[2024-09-20T13:47:28.170Z] info: Server is running on port 3000
+[2024-09-20T13:47:31.543Z] info: Server is running on port 3000
+[2024-09-20T13:53:26.674Z] info: Server is running on port 3000
+[2024-09-20T14:04:20.398Z] error: Authentication failed: Cannot read properties of undefined (reading 'replace')
+[2024-09-20T14:05:30.209Z] error: Error creating hospital: Hospital validation failed: name: Path `name` is required., location: Path `location` is required.
+[2024-09-20T14:05:57.633Z] info: Server is running on port 3000
+[2024-09-20T14:06:36.781Z] info: Server is running on port 3000
+[2024-09-20T14:06:41.027Z] info: Server is running on port 3000
+[2024-09-20T14:06:51.752Z] info: Server is running on port 3000
+[2024-09-20T14:07:03.433Z] info: Server is running on port 3000
+[2024-09-20T14:07:13.961Z] error: Error creating hospital: Hospital validation failed: name: Path `name` is required., location: Path `location` is required.
+[2024-09-20T14:10:38.010Z] info: Server is running on port 3000
+[2024-09-20T14:10:50.562Z] info: Server is running on port 3000
+[2024-09-20T14:10:50.927Z] error: Authentication failed: jwt expired
+[2024-09-20T14:11:02.471Z] error: Authentication failed: jwt expired
+[2024-09-20T14:11:32.577Z] error: Authentication failed: jwt expired
+[2024-09-20T14:15:35.925Z] info: Server is running on port 3000
+[2024-09-20T14:16:26.015Z] info: Server is running on port 3000
+[2024-09-20T14:16:28.346Z] info: Server is running on port 3000
+[2024-09-20T14:16:31.424Z] info: Server is running on port 3000
+[2024-09-20T14:16:34.502Z] info: Server is running on port 3000
+[2024-09-20T14:16:38.296Z] info: Server is running on port 3000
+[2024-09-20T14:16:44.818Z] info: Server is running on port 3000
+[2024-09-20T14:19:37.073Z] info: Server is running on port 3000
+[2024-09-20T14:23:59.444Z] error: Authentication failed: jwt expired
+[2024-09-20T14:24:44.616Z] error: Authentication failed: jwt expired
+[2024-09-20T14:26:43.644Z] info: Server is running on port 3000
+[2024-09-20T14:26:52.239Z] info: Server is running on port 3000
+[2024-09-20T14:29:19.176Z] info: Server is running on port 3000
+[2024-09-20T14:35:56.705Z] info: Server is running on port 3000
+[2024-09-20T14:36:47.716Z] info: Server is running on port 3000
+[2024-09-20T14:37:20.452Z] info: Server is running on port 3000
+[2024-09-20T14:37:42.288Z] info: Server is running on port 3000
+[2024-09-20T14:37:53.016Z] info: Server is running on port 3000
+[2024-09-20T14:37:55.649Z] info: Server is running on port 3000
+[2024-09-20T14:39:59.499Z] info: Server is running on port 3000
+[2024-09-20T14:40:33.386Z] info: Server is running on port 3000
+[2024-09-20T14:40:41.483Z] info: Server is running on port 3000
+[2024-09-20T14:40:46.263Z] info: Server is running on port 3000
+[2024-09-20T14:40:54.822Z] info: Server is running on port 3000
+[2024-09-20T14:40:58.684Z] info: Server is running on port 3000
+[2024-09-20T14:41:12.090Z] info: Server is running on port 3000
+[2024-09-20T14:41:24.326Z] info: Server is running on port 3000
+[2024-09-20T14:41:30.283Z] info: Server is running on port 3000
+[2024-09-20T14:41:36.466Z] info: Server is running on port 3000
+[2024-09-20T14:41:40.254Z] info: Server is running on port 3000
+[2024-09-20T14:41:48.856Z] info: Server is running on port 3000
+[2024-09-20T14:42:35.772Z] info: Server is running on port 3000
+[2024-09-20T14:43:27.136Z] info: Server is running on port 3000
+[2024-09-20T14:43:43.510Z] info: Server is running on port 3000
+[2024-09-20T14:44:16.440Z] info: Server is running on port 3000
+[2024-09-20T14:44:23.407Z] info: Server is running on port 3000
+[2024-09-20T14:44:30.765Z] info: Server is running on port 3000
+[2024-09-20T14:45:01.465Z] info: Server is running on port 3000
+[2024-09-20T14:45:12.114Z] error: Error deleting hospital: Cannot set headers after they are sent to the client
+[2024-09-20T14:45:58.025Z] info: Server is running on port 3000
+[2024-09-20T14:46:08.718Z] error: Error deleting hospital: Cannot set headers after they are sent to the client

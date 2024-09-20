@@ -5,7 +5,7 @@ const logger = require('../utils/logger');
 exports.getDrivers = async (req, res) => {
   try {
     const drivers = await Driver.find().populate('ambulance');
-    res.json(drivers);
+    res.json(drivers); 
   } catch (err) {
     logger.error('Error fetching drivers:', err);
     res.status(500).json({ error: 'Internal server error' });
@@ -15,13 +15,20 @@ exports.getDrivers = async (req, res) => {
 exports.createDriver = async (req, res) => {
   try {
     const { name, license, ambulanceId } = req.body;
+     
+    if(!name||!license){
+        return res.status(400).send("please all fields are required");
+    }
+
     const ambulance = await Ambulance.findById(ambulanceId);
+
+    
     if (!ambulance) {
       return res.status(404).json({ error: 'Ambulance not found' });
     }
     const newDriver = new Driver({ name, license, ambulance: ambulance._id });
     await newDriver.save();
-    res.status(201).json(newDriver);
+    res.status(201).json(newDriver); 
   } catch (err) {
     logger.error('Error creating driver:', err);
     res.status(500).json({ error: 'Internal server error' });

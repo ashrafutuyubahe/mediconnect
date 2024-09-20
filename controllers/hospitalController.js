@@ -14,6 +14,10 @@ exports.getHospitals = async (req, res) => {
 exports.createHospital = async (req, res) => {
   try {
     const { name, location } = req.body;
+
+      if(!location || !name){
+        res.status(400).send("please provide all fields");
+      }
     const newHospital = new Hospital({ name, location });
     await newHospital.save();
     res.status(201).json(newHospital);
@@ -44,10 +48,15 @@ exports.updateHospital = async (req, res) => {
 
 exports.deleteHospital = async (req, res) => {
   try {
-    const { id } = req.params;
+    const { id } = req.query;
+    const isHospitalExist= await Hospital.findOne({_id:id});
+    if(!isHospitalExist){
+     res.status(404).send("the hospital doesn't exist");
+    }
+
     const deletedHospital = await Hospital.findByIdAndDelete(id);
     if (!deletedHospital) {
-      return res.status(404).json({ error: 'Hospital not found' });
+      return res.status(404).json({ error: 'failed to delete hospital' });
     }
     res.json({ message: 'Hospital deleted' });
   } catch (err) {
