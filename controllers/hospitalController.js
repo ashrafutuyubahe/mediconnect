@@ -1,5 +1,6 @@
 const Hospital = require('../models/Hospital');
 const logger = require('../utils/logger');
+const mongoose= require("mongoose");
 
 exports.getHospitals = async (req, res) => {
   try {
@@ -48,17 +49,26 @@ exports.updateHospital = async (req, res) => {
 
 exports.deleteHospital = async (req, res) => {
   try {
-    const { id } = req.query;
-    const isHospitalExist= await Hospital.findOne({_id:id});
-    if(!isHospitalExist){
-     res.status(404).send("the hospital doesn't exist");
+    const { id } = req.params;
+
+   
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res.status(400).json({ error: 'Invalid hospital ID format' });
+    }
+
+   
+    const isHospitalExist = await Hospital.findById(id);
+    
+    if (!isHospitalExist) {
+      return res.status(404).json({ error: "The hospital doesn't exist" });
     }
 
     const deletedHospital = await Hospital.findByIdAndDelete(id);
     if (!deletedHospital) {
-      return res.status(404).json({ error: 'failed to delete hospital' });
+      return res.status(404).json({ error: 'Hospital not found' });
     }
-    res.json({ message: 'Hospital deleted' });
+
+    res.json({ message: 'Hospital deleted successfully' });
   } catch (err) {
     logger.error('Error deleting hospital:', err);
     res.status(500).json({ error: 'Internal server error' });

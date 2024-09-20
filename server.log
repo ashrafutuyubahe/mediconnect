@@ -123,3 +123,8 @@
 [2024-09-20T14:45:58.025Z] info: Server is running on port 3000
 [2024-09-20T14:46:08.718Z] error: Error deleting hospital: Cannot set headers after they are sent to the client
 [2024-09-20T14:46:28.207Z] info: Server is running on port 3000
+[2024-09-20T14:51:05.451Z] info: Server is running on port 3000
+[2024-09-20T14:51:15.628Z] error: Error deleting hospital: mongoose is not defined
+[2024-09-20T14:51:35.869Z] info: Server is running on port 3000
+[2024-09-20T14:51:47.499Z] info: Server is running on port 3000
+[2024-09-20T14:52:26.430Z] info: Server is running on port 3000
