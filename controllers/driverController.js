@@ -16,19 +16,20 @@ exports.createDriver = async (req, res) => {
   try {
     const { name, license, ambulanceId } = req.body;
      
-    if(!name||!license){
+    if(!name||!license||!ambulanceId){
         return res.status(400).send("please all fields are required");
     }
 
     const ambulance = await Ambulance.findById(ambulanceId);
-
     
     if (!ambulance) {
       return res.status(404).json({ error: 'Ambulance not found' });
     }
+
     const newDriver = new Driver({ name, license, ambulance: ambulance._id });
     await newDriver.save();
-    res.status(201).json(newDriver); 
+    
+    return res.status(201).json({message:"driver has been created successfully",newDriver}); 
   } catch (err) {
     logger.error('Error creating driver:', err);
     res.status(500).json({ error: 'Internal server error' });
