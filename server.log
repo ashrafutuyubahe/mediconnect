@@ -223,3 +223,70 @@
 [2024-09-20T16:07:29.998Z] info: Server is running on port 3000
 [2024-09-20T16:07:39.635Z] info: Server is running on port 3000
 [2024-09-20T16:08:35.001Z] info: Server is running on port 3000
+[2024-09-21T08:53:21.251Z] info: Server is running on port 3000
+[2024-09-21T09:05:20.131Z] error: Error creating ambulance: Ambulance validation failed: licensePlate: Path `licensePlate` is required., make: Path `make` is required., model: Path `model` is required.
+[2024-09-21T09:07:29.092Z] info: Server is running on port 3000
+[2024-09-21T09:08:03.773Z] info: Server is running on port 3000
+[2024-09-21T09:08:39.831Z] info: Server is running on port 3000
+[2024-09-21T09:08:43.434Z] info: Server is running on port 3000
+[2024-09-21T09:08:45.785Z] info: Server is running on port 3000
+[2024-09-21T09:08:53.499Z] info: Server is running on port 3000
+[2024-09-21T09:09:12.454Z] info: Server is running on port 3000
+[2024-09-21T09:09:17.606Z] info: Server is running on port 3000
+[2024-09-21T09:09:19.172Z] info: Server is running on port 3000
+[2024-09-21T09:09:24.644Z] info: Server is running on port 3000
+[2024-09-21T09:09:41.859Z] info: Server is running on port 3000
+[2024-09-21T09:09:47.440Z] info: Server is running on port 3000
+[2024-09-21T09:09:52.400Z] info: Server is running on port 3000
+[2024-09-21T09:10:01.215Z] info: Server is running on port 3000
+[2024-09-21T09:10:05.457Z] info: Server is running on port 3000
+[2024-09-21T09:10:08.568Z] info: Server is running on port 3000
+[2024-09-21T09:10:11.668Z] info: Server is running on port 3000
+[2024-09-21T09:10:15.701Z] info: Server is running on port 3000
+[2024-09-21T09:10:21.061Z] info: Server is running on port 3000
+[2024-09-21T09:10:29.345Z] info: Server is running on port 3000
+[2024-09-21T09:10:31.346Z] info: Server is running on port 3000
+[2024-09-21T09:10:37.535Z] info: Server is running on port 3000
+[2024-09-21T09:10:46.740Z] info: Server is running on port 3000
+[2024-09-21T09:10:53.167Z] info: Server is running on port 3000
+[2024-09-21T09:10:56.625Z] info: Server is running on port 3000
+[2024-09-21T09:11:02.132Z] info: Server is running on port 3000
+[2024-09-21T09:11:09.919Z] info: Server is running on port 3000
+[2024-09-21T09:11:44.118Z] info: Server is running on port 3000
+[2024-09-21T09:11:54.679Z] info: Server is running on port 3000
+[2024-09-21T09:12:07.051Z] info: Server is running on port 3000
+[2024-09-21T09:12:10.632Z] info: Server is running on port 3000
+[2024-09-21T09:15:08.820Z] error: Error creating ambulance: Parameter "filter" to findOne() must be an object, got "RAM34" (type string)
+[2024-09-21T09:15:46.246Z] info: Server is running on port 3000
+[2024-09-21T09:15:49.713Z] info: Server is running on port 3000
+[2024-09-21T09:16:04.047Z] error: Error creating ambulance: Can't extract geo keys: { _id: ObjectId('66ee8ed3f53dc2db2ae5f93c'), licensePlate: "RAM34", make: "US", model: "mercedes", location: { type: "Point", coordinates: [ 3432, 123432 ] }, __v: 0 }  Longitude/latitude is out of bounds, lng: 3432 lat: 123432
+[2024-09-21T09:17:46.505Z] error: Error creating ambulance: Cannot set headers after they are sent to the client
+[2024-09-21T09:18:50.632Z] info: Server is running on port 3000
+[2024-09-21T09:22:31.921Z] info: Server is running on port 3000
+[2024-09-21T09:22:39.311Z] info: Server is running on port 3000
+[2024-09-21T09:22:55.606Z] info: Server is running on port 3000
+[2024-09-21T09:23:09.760Z] info: Server is running on port 3000
+[2024-09-21T09:23:14.413Z] info: Server is running on port 3000
+[2024-09-21T09:23:21.615Z] info: Server is running on port 3000
+[2024-09-21T09:23:33.083Z] info: Server is running on port 3000
+[2024-09-21T09:23:38.012Z] info: Server is running on port 3000
+[2024-09-21T09:23:40.656Z] info: Server is running on port 3000
+[2024-09-21T09:24:06.936Z] info: Server is running on port 3000
+[2024-09-21T09:25:49.423Z] info: Server is running on port 3000
+[2024-09-21T09:26:08.261Z] info: Server is running on port 3000
+[2024-09-21T09:26:42.477Z] info: Server is running on port 3000
+[2024-09-21T09:26:47.192Z] info: Server is running on port 3000
+[2024-09-21T09:26:52.456Z] info: Server is running on port 3000
+[2024-09-21T09:27:02.905Z] info: Server is running on port 3000
+[2024-09-21T09:27:10.051Z] info: Server is running on port 3000
+[2024-09-21T09:27:13.834Z] info: Server is running on port 3000
+[2024-09-21T09:27:20.480Z] info: Server is running on port 3000
+[2024-09-21T09:27:41.271Z] info: Server is running on port 3000
+[2024-09-21T09:27:46.746Z] error: Error updating ambulance: Cast to ObjectId failed for value "66ee8f83ee89af7e18c5c6e" (type string) at path "_id" for model "Ambulance"
+[2024-09-21T09:28:13.405Z] error: Error updating ambulance: Plan executor error during findAndModify :: caused by :: Can't extract geo keys: { _id: ObjectId('66ee8f83ee89af7e18c5c6e0'), licensePlate: "RAC3489", make: "US", model: "Rover", location: { type: "Point", coordinates: [ null, null ] }, __v: 0 }  Point must only contain numeric elements, instead got type null
+[2024-09-21T09:28:40.765Z] info: Server is running on port 3000
+[2024-09-21T09:28:55.967Z] info: Server is running on port 3000
+[2024-09-21T09:29:01.254Z] info: Server is running on port 3000
+[2024-09-21T09:29:06.321Z] info: Server is running on port 3000
+[2024-09-21T09:29:16.510Z] info: Server is running on port 3000
+[2024-09-21T09:29:20.115Z] info: Server is running on port 3000
