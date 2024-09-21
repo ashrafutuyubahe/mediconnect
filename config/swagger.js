@@ -13,6 +13,11 @@ const options = {
         url: 'http://localhost:3000',
         description: 'Local server',
       },
+      {
+        url: 'https://mediconnect-ofkp.onrender.com',
+        description: 'production server'
+
+      }
     ],
     components: {
       securitySchemes: {
