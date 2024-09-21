@@ -33,15 +33,7 @@ app.use("/api/hospitalRoutes", hospitalRoutes);
 // app.use("/api/payment_methodRoutes",payment_methodRoutes)
 
 
-app.use('/api-docs',
-  basicAuth({
-    users: { 'admin': 'password' }, 
-    challenge: true,
-    realm: 'Swagger API',
-  }),
-  swaggerUi.serve,
-  swaggerUi.setup(swaggerSpec)
-);
+
 
 
 app.use((err, req, res, next) => {
