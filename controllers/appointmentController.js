@@ -48,20 +48,19 @@ exports.updateAppointment = async (req, res) => {
       res.status(400).send("please provide all fields");
     }
 
-    const doesAppointmentExist = await Hospital.findOne({id});
+    const doesAppointmentExist = await Appointment.findOne({id});
 
     if(!doesAppointmentExist){
-      res.status(400).send("Hospital doesn't exists");
-    }   
-
+      res.status(400).send("Appointment doesn't exists");
+    }
 
     const updatedAppointment = await Appointment.findOneAndUpdate(
       { _id: id, user: req.user.id },
-      { date, time, provider },
+      {date: new Date(date), time, provider },
       { new: true }
     );
     if (!updatedAppointment) {
-      return res.status(404).json({ error: 'Appointment not found' });
+      return res.status(404).json({ error: 'failed to update the Appointment' });
     }
     res.json(updatedAppointment);
   } catch (err) {

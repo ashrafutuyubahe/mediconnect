@@ -213,3 +213,13 @@
 [2024-09-20T15:55:06.054Z] info: Server is running on port 3000
 [2024-09-20T15:55:25.833Z] info: Server is running on port 3000
 [2024-09-20T15:55:31.335Z] info: Server is running on port 3000
+[2024-09-20T16:00:37.736Z] info: Server is running on port 3000
+[2024-09-20T16:00:49.283Z] error: Error updating appointment: Hospital is not defined
+[2024-09-20T16:02:33.951Z] info: Server is running on port 3000
+[2024-09-20T16:04:45.203Z] error: Error updating appointment: Cannot set headers after they are sent to the client
+[2024-09-20T16:05:32.012Z] info: Server is running on port 3000
+[2024-09-20T16:05:47.538Z] info: Server is running on port 3000
+[2024-09-20T16:06:42.365Z] error: Error updating appointment: Cast to ObjectId failed for value "66ed6f0acd1ef5ec5e76d7633" (type string) at path "_id" for model "Appointment"
+[2024-09-20T16:07:29.998Z] info: Server is running on port 3000
+[2024-09-20T16:07:39.635Z] info: Server is running on port 3000
+[2024-09-20T16:08:35.001Z] info: Server is running on port 3000
