@@ -11,4 +11,4 @@ router.put('/payment-methods/:id', paymentController.updatePaymentMethod);
 router.delete('/payment-methods/:id', paymentController.deletePaymentMethod);
 router.post('/payments', paymentController.processPayment);
 
-module.exports = router; 
+module.exports = router;

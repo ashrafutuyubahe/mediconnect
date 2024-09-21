@@ -1,6 +1,7 @@
-const PaymentMethod = require('../models/PaymentMethod');
+const PaymentMethod = require("../models/Payment");
 const logger = require('../utils/logger');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const Appointment= require("../models/Appointment");
 
 exports.addPaymentMethod = async (req, res) => {
   try {
@@ -62,12 +63,19 @@ exports.updatePaymentMethod = async (req, res) => {
   }
 };
 
+
 exports.deletePaymentMethod = async (req, res) => {
   try {
     const { id } = req.params;
+
+    const  findPaymentExist= await PaymentMethod.findById(id);
+     if(!findPaymentExist){
+      return res.status(401).send("payment method not found");
+     }
+
     const deletedPaymentMethod = await PaymentMethod.findOneAndDelete({ _id: id, user: req.user.id });
     if (!deletedPaymentMethod) {
-      return res.status(404).json({ error: 'Payment method not found' });
+      return res.status(404).json({ error: 'failed to delete payment method' });
     }
     res.json({ message: 'Payment method deleted' });
   } catch (err) {
@@ -75,6 +83,7 @@ exports.deletePaymentMethod = async (req, res) => {
     res.status(500).json({ error: 'Internal server error' });
   }
 };
+
 
 exports.processPayment = async (req, res) => {
   try {

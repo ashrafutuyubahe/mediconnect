@@ -20,6 +20,7 @@ const appointmentsRoutes = require("./routes/appointmentRoutes");
 const ambulanceRoutes = require("./routes/ambulanceRoutes");
 const driverRoutes = require("./routes/driverRoutes");
 const hospitalRoutes = require("./routes/hospitalRoutes");
+// const payment_methodRoutes = require("./routes/paymentRoute");
 
 app.use(express.json());
 
@@ -30,6 +31,8 @@ app.use("/api/appointmentsRoutes", appointmentsRoutes);
 app.use("/api/ambulanceRoutes", ambulanceRoutes);
 app.use("/api/driverRoutes", driverRoutes);
 app.use("/api/hospitalRoutes", hospitalRoutes);
+// app.use("/api/payment_methodRoutes",payment_methodRoutes)
+
 
 app.use((err, req, res, next) => {
   logger.error("An error occurred:", err);
