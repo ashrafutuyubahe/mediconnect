@@ -7,5 +7,5 @@ router.post('/register', authController.register);
 router.post('/login', authController.login);
 
 router.post('/google', authController.googleLoginCallback);
-
+ 
 module.exports = router;    

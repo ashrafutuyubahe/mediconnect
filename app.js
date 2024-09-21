@@ -2,6 +2,9 @@ const express = require("express");
 const http = require("http");
 const socketIo = require("socket.io");
 const dotenv = require("dotenv");
+
+const swaggerUi = require('swagger-ui-express');
+const swaggerSpec = require('./config/swagger');
 dotenv.config();
 
 const app = express();
@@ -20,9 +23,7 @@ const ambulanceRoutes = require("./routes/ambulanceRoutes");
 const driverRoutes = require("./routes/driverRoutes");
 const hospitalRoutes = require("./routes/hospitalRoutes");
 // const payment_methodRoutes = require("./routes/paymentRoute");
-
 app.use(express.json());
-
 connectDB();
 
 app.use("/auth/authRoute", authRoutes);
@@ -31,6 +32,9 @@ app.use("/api/ambulanceRoutes", ambulanceRoutes);
 app.use("/api/driverRoutes", driverRoutes);
 app.use("/api/hospitalRoutes", hospitalRoutes);
 // app.use("/api/payment_methodRoutes",payment_methodRoutes)
+
+//swagger ui
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 
 

@@ -26,9 +26,12 @@ const options = {
           description: 'Enter JWT token in the format **Bearer &lt;token&gt;**',
         },
       },
-      schemas: {
-        
+      schemas: {        
 
+        AuthController:{
+          type:"object",
+          description: 'Represents the authentication of user.',
+        },
         Appointment: {
           type: 'object',
           description: 'Represents an appointment between a user and a provider.',
@@ -71,6 +74,7 @@ const options = {
             user: '60d21b4967d0d8992e610c86',
           },
         },
+
 
         // Example User schema (Uncomment and customize if needed)
         /*
