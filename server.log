@@ -340,3 +340,4 @@
 [2024-09-21T10:02:00.999Z] error: Error deleting driver: Parameter "filter" to findOne() must be an object, got "66ee9934601ecd94eb461866" (type string)
 [2024-09-21T10:02:33.132Z] info: Server is running on port 3000
 [2024-09-21T10:02:42.483Z] info: Server is running on port 3000
+[2024-09-21T10:03:16.706Z] info: Server is running on port 3000
