@@ -5,9 +5,18 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 exports.addPaymentMethod = async (req, res) => {
   try {
     const { type, last4, expMonth, expYear } = req.body;
+    if( !type||!last4 ||!expMonth ||!expYear){
+      return res.status(401).send("please provide all fields");
+    }
+
+     const  findPaymentExist= await PaymentMethod.findOne({type});
+     if(findPaymentExist){
+      return res.status(401).send("payment method already exists");
+     }
+
     const newPaymentMethod = new PaymentMethod({ type, last4, expMonth, expYear, user: req.user.id });
     await newPaymentMethod.save();
-    res.status(201).json(newPaymentMethod);
+    res.status(201).json({message:"payment method added",newPaymentMethod});
   } catch (err) {
     logger.error('Error adding payment method:', err);
     res.status(500).json({ error: 'Internal server error' });
@@ -28,13 +37,23 @@ exports.updatePaymentMethod = async (req, res) => {
   try {
     const { id } = req.params;
     const { type, last4, expMonth, expYear } = req.body;
+
+    if( !type||!last4 ||!expMonth ||!expYear){
+      return res.status(401).send("please provide all fields");
+    }
+
+    const  findPaymentExist= await PaymentMethod.findOne({type});
+     if(!findPaymentExist){
+      return res.status(401).send("payment method not found");
+     }
+
     const updatedPaymentMethod = await PaymentMethod.findOneAndUpdate(
       { _id: id, user: req.user.id },
       { type, last4, expMonth, expYear },
       { new: true }
     );
     if (!updatedPaymentMethod) {
-      return res.status(404).json({ error: 'Payment method not found' });
+      return res.status(404).json({ error: 'failed  to update the payment method' });
     }
     res.json(updatedPaymentMethod);
   } catch (err) {
