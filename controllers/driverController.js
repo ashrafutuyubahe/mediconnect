@@ -27,7 +27,7 @@ exports.createDriver = async (req, res) => {
       return res.status(404).json({ error: 'Ambulance not found' });
     }
 
-    const findDriverExists= await Driver.findOne({license, ambulanceId});
+    const findDriverExists= await Driver.findOne({license,name});
 
     if(findDriverExists){
       return res.status(401).send("driver  already exists");
@@ -83,7 +83,7 @@ exports.deleteDriver = async (req, res) => {
   try {
     const { id } = req.params;
 
-    const findDriverExists= await Driver.findOne(id);
+    const findDriverExists= await Driver.findById(id);
     if(!findDriverExists){
       return res.status(401).send("driver not found");
     }
