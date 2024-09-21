@@ -6,4 +6,4 @@ const PaymentMethod = mongoose.model('PaymentMethod', {
     expYear: Number,
     user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
   });
-module.exports=PaymentMethod;
+module.exports=PaymentMethod; 
