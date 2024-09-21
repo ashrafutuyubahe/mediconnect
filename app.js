@@ -2,7 +2,6 @@ const express = require("express");
 const http = require("http");
 const socketIo = require("socket.io");
 const dotenv = require("dotenv");
-
 dotenv.config();
 
 const app = express();
@@ -32,6 +31,17 @@ app.use("/api/ambulanceRoutes", ambulanceRoutes);
 app.use("/api/driverRoutes", driverRoutes);
 app.use("/api/hospitalRoutes", hospitalRoutes);
 // app.use("/api/payment_methodRoutes",payment_methodRoutes)
+
+
+app.use('/api-docs',
+  basicAuth({
+    users: { 'admin': 'password' }, 
+    challenge: true,
+    realm: 'Swagger API',
+  }),
+  swaggerUi.serve,
+  swaggerUi.setup(swaggerSpec)
+);
 
 
 app.use((err, req, res, next) => {
